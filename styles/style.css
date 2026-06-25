@@ -309,6 +309,149 @@ body {
   text-decoration: underline;
 }
 
+/* Featured Section Base Layout */
+.featured-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px; /* Generous gap between image and text */
+  padding: 80px 0;
+  width: 100%;
+}
+
+/* Left Image Column (Takes up 50% width) */
+.featured-image-container {
+  flex: 0 0 50%;
+}
+
+.featured-img {
+  width: 100%;
+  height: auto;
+  max-width: 540px; /* Prevents the image from getting overly large on huge screens */
+  display: block;
+  object-fit: contain;
+}
+
+/* Right Text Column (Takes up 50% width) */
+.featured-text-container {
+  flex: 0 0 50%;
+  max-width: 480px; /* Keeps line length comfortable to read */
+}
+
+.featured-title {
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2b313c;
+  margin-bottom: 20px;
+}
+
+.featured-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4a505a;
+  margin-bottom: 32px;
+}
+
+/* Featured Button Style */
+.featured-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #de3475;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.featured-btn:hover {
+  background-color: #c72662;
+  transform: translateY(-2px);
+}
+
+.btn-arrow {
+  font-size: 18px;
+}
+
+/* Footer Main Styles */
+.site-footer {
+  background-color: #0b111e; /* Deep dark slate background */
+  color: #ffffff;
+  padding: 40px 6% 20px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* Master container to center layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Left Brand Column */
+.footer-brand {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.copyright-text,
+.rights-text {
+  font-size: 14px;
+  color: #9ca3af; /* Muted gray text color */
+  line-height: 1.8;
+}
+
+/* Right Side Link Categories Grid */
+.footer-links-wrapper {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  width: 100%;
+}
+
+.footer-col h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none; /* Removes default bullet points */
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #d1d5db; /* Light gray links */
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #de3475; /* Hover pink sync color from the hero elements */
+}
+
 /* Responsive Tweak for Smaller Screens */
 @media (max-width: 992px) {
   .hero-container {
@@ -328,6 +471,22 @@ body {
   }
   .product-grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+  .featured-section {
+    flex-direction: column-reverse; /* Stacks text on top of the image on mobile */
+    text-align: center;
+    gap: 40px;
+    padding: 50px 0;
+  }
+
+  .featured-image-container,
+  .featured-text-container {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .featured-img {
+    margin: 0 auto; /* Centers image on small screens */
   }
 }
 
