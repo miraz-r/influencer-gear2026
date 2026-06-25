@@ -3,7 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Influencer Gear</title>
+    <title>Influencer Gears</title>
+    <!-- Font Awesome for Navbar Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="page-wrapper">
+      <!-- Header / Navigation -->
+      <header class="navbar">
+        <div class="logo">Influencer Gears</div>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Sign up</a>
+          <a href="#">Log In</a>
+          <button class="icon-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="icon-btn cart-btn" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-dot"></span>
+          </button>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <main class="hero-container">
+        <div class="hero-content">
+          <h1>Start your Journey as Influencer</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem
+            vestibulum sed scelerisque eros. Lectus faucibus.
+          </p>
+          <a href="#" class="cta-btn">
+            Preebook now
+            <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <img
+            src="images/Circle design.svg"
+            alt=""
+            class="hero-bg-image"
+            aria-hidden="true"
+          />
+
+          <img
+            src="images/main-camera.png"
+            alt="Fujifilm Camera"
+            class="hero-main-image"
+          />
+        </div>
+      </main>
+
+      <!-- Brands section -->
+      <section class="brands-section">
+        <div class="brands-grid">
+          <img src="logos/Alibaba.svg" alt="Brand Logo 1" class="brand-logo" />
+
+          <img src="logos/Amazon.svg" alt="Brand Logo 2" class="brand-logo" />
+
+          <img
+            src="logos/Daraz.pk Logo.svg"
+            alt="Brand Logo 3"
+            class="brand-logo"
+          />
+
+          <img src="logos/Ebay.svg" alt="Brand Logo 4" class="brand-logo" />
+
+          <img src="logos/Walmart.svg" alt="Brand Logo 5" class="brand-logo" />
+
+          <img src="logos/Rakuten.svg" alt="Brand Logo 6" class="brand-logo" />
+
+          <img src="logos/Target.svg" alt="Brand Logo 7" class="brand-logo" />
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
