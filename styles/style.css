@@ -455,56 +455,125 @@ body {
 }
 
 /* Responsive Tweak for Smaller Screens */
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .hero-container {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 40px;
+    gap: 20px;
   }
-  .hero-image-wrapper {
-    margin-top: 40px;
-    min-height: 360px;
-  }
-  .hero-bg-image {
-    max-width: 360px;
-  }
-  .hero-main-image {
-    max-width: 320px;
-  }
+
   .product-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
   }
-  .featured-section {
-    flex-direction: column-reverse; /* Stacks text on top of the image on mobile */
+
+  .brands-grid {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
     text-align: center;
     gap: 40px;
-    padding: 50px 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-image-wrapper {
+    width: 100%;
+  }
+
+  .cta-btn {
+    margin: 0 auto;
+  }
+
+  .brands-grid {
+    justify-content: center;
+    gap: 20px 40px;
+  }
+
+  .featured-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
   }
 
   .featured-image-container,
   .featured-text-container {
-    flex: 0 0 100%;
+    flex: 1;
     max-width: 100%;
   }
 
-  .featured-img {
-    margin: 0 auto; /* Centers image on small screens */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links-wrapper {
+    flex-direction: column;
+    gap: 30px;
   }
 }
 
-@media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: 1fr; /* 1 column on phones */
+@media screen and (max-width: 576px) {
+  .page-wrapper {
+    padding: 0 20px;
   }
-}
 
-@media (max-width: 768px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-main-image {
+    max-width: 100%;
+  }
+
+  .hero-bg-image {
+    max-width: 100%;
+  }
+
   .brands-grid {
-    justify-content: center;
-    gap: 40px 24px;
+    gap: 20px;
   }
 
-  .brand-logo {
-    max-height: 32px;
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .featured-title {
+    font-size: 24px;
+  }
+
+  .featured-description {
+    font-size: 14px;
+  }
+
+  .footer-links-wrapper {
+    gap: 20px;
   }
 }
